@@ -10,7 +10,7 @@ class Account:
         if(command.action == Action.DEPOSIT):
             self.balance += command.amount
             command.success = True
-        elif(command.action == Action.WITHDRAW and command.amount < self.balance):
+        elif(command.action == Action.WITHDRAW and command.amount <= self.balance):
             self.balance -= command.amount
             command.success = True
         else:
